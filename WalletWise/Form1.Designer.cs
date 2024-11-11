@@ -35,16 +35,16 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Addtran = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.lblOlho = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Addtran = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -116,6 +116,48 @@
             this.label9.Text = "R$ 100.534,90";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label11.Location = new System.Drawing.Point(74, 493);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(160, 44);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Adcionar transação";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label12.Location = new System.Drawing.Point(382, 493);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(160, 44);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Visualizar graficos";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button2
+            // 
+            this.button2.Image = global::WalletWise.Properties.Resources.graficos;
+            this.button2.Location = new System.Drawing.Point(382, 537);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(160, 55);
+            this.button2.TabIndex = 15;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // Addtran
+            // 
+            this.Addtran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(38)))));
+            this.Addtran.Image = global::WalletWise.Properties.Resources.Button;
+            this.Addtran.Location = new System.Drawing.Point(74, 537);
+            this.Addtran.Name = "Addtran";
+            this.Addtran.Size = new System.Drawing.Size(160, 55);
+            this.Addtran.TabIndex = 13;
+            this.Addtran.UseVisualStyleBackColor = false;
+            this.Addtran.Click += new System.EventHandler(this.Addtran_Click);
+            // 
             // label10
             // 
             this.label10.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -170,45 +212,6 @@
             this.label1.Size = new System.Drawing.Size(634, 130);
             this.label1.TabIndex = 0;
             // 
-            // Addtran
-            // 
-            this.Addtran.Location = new System.Drawing.Point(74, 530);
-            this.Addtran.Name = "Addtran";
-            this.Addtran.Size = new System.Drawing.Size(160, 65);
-            this.Addtran.TabIndex = 13;
-            this.Addtran.Text = "button1";
-            this.Addtran.UseVisualStyleBackColor = true;
-            this.Addtran.Click += new System.EventHandler(this.Addtran_Click);
-            // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label11.Location = new System.Drawing.Point(74, 493);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(160, 44);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Adcionar transação";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            this.label12.Font = new System.Drawing.Font("Elephant", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label12.Location = new System.Drawing.Point(382, 493);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(160, 44);
-            this.label12.TabIndex = 16;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(382, 530);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(160, 65);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,6 +234,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

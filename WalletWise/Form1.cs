@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace WalletWise
@@ -8,8 +9,7 @@ namespace WalletWise
         public Form1()
         {
             InitializeComponent();
-        }
-        int acionado = 0;
+        }       
         private bool isValueHidden = true;
         private void Lblolho_Click(object sender, EventArgs e) {
             isValueHidden = !isValueHidden;
@@ -28,6 +28,8 @@ namespace WalletWise
         {
             Transacao transacao = new Transacao();
             transacao.ShowDialog();
+            this.Close();
         }
+
     }
 }
