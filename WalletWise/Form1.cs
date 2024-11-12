@@ -26,10 +26,16 @@ namespace WalletWise
 
         private void Addtran_Click(object sender, EventArgs e)
         {
-            Transacao transacao = new Transacao();
+            FormTransacao transacao = new FormTransacao();
             transacao.ShowDialog();
             this.Close();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            DalTransacao.CriarBancoSQLite();
+            DalTransacao.CriarTabela();
+        
+        }
     }
 }

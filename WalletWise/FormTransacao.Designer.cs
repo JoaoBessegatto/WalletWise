@@ -1,6 +1,6 @@
 ﻿namespace WalletWise
 {
-    partial class Transacao
+    partial class FormTransacao
     {
         /// <summary>
         /// Required designer variable.
@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Transacao));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTransacao));
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.RdbDespesa = new System.Windows.Forms.RadioButton();
+            this.RdbReceita = new System.Windows.Forms.RadioButton();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -68,7 +68,7 @@
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(114, 187);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(406, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(408, 20);
             this.dateTimePicker1.TabIndex = 6;
             // 
             // label11
@@ -115,33 +115,33 @@
             this.label8.Text = "Valor da transação";
             this.label8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // comboBox1
+            // cmbTipo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbTipo.FormattingEnabled = true;
+            this.cmbTipo.Items.AddRange(new object[] {
             "Alimentação",
             "Fixo",
             "Transporte ",
             "Saúde ",
             "Lazer"});
-            this.comboBox1.Location = new System.Drawing.Point(114, 259);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(406, 21);
-            this.comboBox1.TabIndex = 23;
-            this.comboBox1.Text = "Selecione o tipo de compra";
+            this.cmbTipo.Location = new System.Drawing.Point(114, 259);
+            this.cmbTipo.Name = "cmbTipo";
+            this.cmbTipo.Size = new System.Drawing.Size(408, 21);
+            this.cmbTipo.TabIndex = 23;
+            this.cmbTipo.Text = "Selecione o tipo de compra";
             // 
             // txtDescricao
             // 
             this.txtDescricao.Location = new System.Drawing.Point(114, 332);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(406, 20);
+            this.txtDescricao.Size = new System.Drawing.Size(408, 20);
             this.txtDescricao.TabIndex = 24;
             // 
             // txtValor
             // 
             this.txtValor.Location = new System.Drawing.Point(114, 408);
             this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(406, 20);
+            this.txtValor.Size = new System.Drawing.Size(408, 20);
             this.txtValor.TabIndex = 25;
             this.txtValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValor_KeyPress);
             // 
@@ -159,35 +159,35 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.RdbDespesa);
+            this.groupBox1.Controls.Add(this.RdbReceita);
             this.groupBox1.Location = new System.Drawing.Point(114, 479);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(406, 20);
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             // 
-            // radioButton2
+            // RdbDespesa
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(335, 2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(67, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Despesa";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.RdbDespesa.AutoSize = true;
+            this.RdbDespesa.Location = new System.Drawing.Point(335, 2);
+            this.RdbDespesa.Name = "RdbDespesa";
+            this.RdbDespesa.Size = new System.Drawing.Size(67, 17);
+            this.RdbDespesa.TabIndex = 1;
+            this.RdbDespesa.TabStop = true;
+            this.RdbDespesa.Text = "Despesa";
+            this.RdbDespesa.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // RdbReceita
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 3);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(62, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Receita";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RdbReceita.AutoSize = true;
+            this.RdbReceita.Location = new System.Drawing.Point(6, 3);
+            this.RdbReceita.Name = "RdbReceita";
+            this.RdbReceita.Size = new System.Drawing.Size(62, 17);
+            this.RdbReceita.TabIndex = 0;
+            this.RdbReceita.TabStop = true;
+            this.RdbReceita.Text = "Receita";
+            this.RdbReceita.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
@@ -207,14 +207,15 @@
             this.label10.Size = new System.Drawing.Size(445, 40);
             this.label10.TabIndex = 28;
             // 
-            // button1
+            // btnSalvar
             // 
-            this.button1.Image = global::WalletWise.Properties.Resources.salvar__1_;
-            this.button1.Location = new System.Drawing.Point(101, 542);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 57);
-            this.button1.TabIndex = 26;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSalvar.Image = global::WalletWise.Properties.Resources.salvar__1_;
+            this.btnSalvar.Location = new System.Drawing.Point(101, 542);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(122, 57);
+            this.btnSalvar.TabIndex = 26;
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // label9
             // 
@@ -279,7 +280,7 @@
             this.label15.Text = "Cancelar";
             this.label15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // Transacao
+            // FormTransacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -291,10 +292,10 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.txtDescricao);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbTipo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
@@ -309,7 +310,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Transacao";
+            this.Name = "FormTransacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transação";
             this.groupBox1.ResumeLayout(false);
@@ -332,15 +333,15 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbTipo;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.TextBox txtValor;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton RdbReceita;
+        private System.Windows.Forms.RadioButton RdbDespesa;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
