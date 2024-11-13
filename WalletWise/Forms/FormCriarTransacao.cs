@@ -10,24 +10,22 @@ using System.Windows.Forms;
 
 namespace WalletWise
 {
-    public partial class FormTransacao : Form
+    public partial class FormCriarTransacao : Form
     {
-        public FormTransacao()
+        public FormCriarTransacao()
         {
             InitializeComponent();
         }
 
         private void txtValor_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-        e.KeyChar != '.' && e.KeyChar != ',')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
                 e.Handled = true;
             }
 
-            if ((e.KeyChar == '.' || e.KeyChar == ',') &&
-                ((sender as TextBox).Text.IndexOf('.') > -1 ||
-                 (sender as TextBox).Text.IndexOf(',') > -1))
+           
+            if (e.KeyChar == ',' && (sender as TextBox).Text.IndexOf(',') > -1)
             {
                 e.Handled = true;
             }
@@ -51,24 +49,46 @@ namespace WalletWise
             {
                 receitaDespesa = "Despesa";
             }
-            else 
+            else
             {
                 MessageBox.Show("Selecione 'Receita' ou 'Despesa'");
                 return;
             }
+
             try
             {
                 Transacao transacao = new Transacao();
                 transacao.Descricao = txtDescricao.Text;
                 transacao.tipo_compra = cmbTipo.Text;
-                transacao.Valor = decimal.Parse(txtValor.Text, System.Globalization.NumberStyles.Currency);
+                
+                transacao.Valor = decimal.Parse(txtValor.Text, new System.Globalization.CultureInfo("pt-BR"));
                 transacao.receita_despesa = receitaDespesa;
                 transacao.Data = dateTimePicker1.Value;
+
+                DalTransacao.Add(transacao);
+
+                MessageBox.Show("Transação salva com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtDescricao.Clear();
+                txtValor.Clear();
+                cmbTipo.SelectedIndex = -1;
+                RdbDespesa.Checked = false;
+                RdbReceita.Checked = false; 
             }
-            catch (Exception ex) 
+            catch (FormatException)
             {
-                throw ex;
+                MessageBox.Show("O valor informado é inválido. Certifique-se de usar vírgula para casas decimais.", "Erro de Formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao salvar a transação: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void lblLogo_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
+            this.Close();
         }
     }
 }

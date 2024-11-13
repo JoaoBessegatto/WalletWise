@@ -133,6 +133,16 @@ namespace WalletWise.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap layout_Graficos {
+            get {
+                object obj = ResourceManager.GetObject("layout Graficos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap layout_transação {
             get {
                 object obj = ResourceManager.GetObject("layout transação", resourceCulture);
@@ -186,6 +196,36 @@ namespace WalletWise.Properties {
         internal static System.Drawing.Bitmap setavermelha {
             get {
                 object obj = ResourceManager.GetObject("setavermelha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transações {
+            get {
+                object obj = ResourceManager.GetObject("transações", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transações1 {
+            get {
+                object obj = ResourceManager.GetObject("transações1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Voltar {
+            get {
+                object obj = ResourceManager.GetObject("Voltar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

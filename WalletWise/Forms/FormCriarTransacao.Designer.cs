@@ -1,6 +1,6 @@
 ﻿namespace WalletWise
 {
-    partial class FormTransacao
+    partial class FormCriarTransacao
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTransacao));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCriarTransacao));
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
@@ -42,6 +42,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.RdbDespesa = new System.Windows.Forms.RadioButton();
             this.RdbReceita = new System.Windows.Forms.RadioButton();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -49,9 +51,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblLogo = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -189,6 +189,28 @@
             this.RdbReceita.Text = "Receita";
             this.RdbReceita.UseVisualStyleBackColor = true;
             // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label13.Location = new System.Drawing.Point(101, 507);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(122, 36);
+            this.label13.TabIndex = 33;
+            this.label13.Text = "Salvar";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label15.Location = new System.Drawing.Point(400, 507);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(122, 36);
+            this.label15.TabIndex = 35;
+            this.label15.Text = "Cancelar";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
             // btnCancelar
             // 
             this.btnCancelar.Image = global::WalletWise.Properties.Resources.cancelar;
@@ -249,36 +271,15 @@
             this.label3.Size = new System.Drawing.Size(445, 40);
             this.label3.TabIndex = 5;
             // 
-            // label2
+            // lblLogo
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Image = global::WalletWise.Properties.Resources.layout_transação;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(634, 130);
-            this.label2.TabIndex = 1;
-            // 
-            // label13
-            // 
-            this.label13.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label13.Location = new System.Drawing.Point(101, 507);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(122, 36);
-            this.label13.TabIndex = 33;
-            this.label13.Text = "Salvar";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label15
-            // 
-            this.label15.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label15.Location = new System.Drawing.Point(400, 507);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(122, 36);
-            this.label15.TabIndex = 35;
-            this.label15.Text = "Cancelar";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblLogo.Image = global::WalletWise.Properties.Resources.layout_transação;
+            this.lblLogo.Location = new System.Drawing.Point(0, 0);
+            this.lblLogo.Name = "lblLogo";
+            this.lblLogo.Size = new System.Drawing.Size(634, 130);
+            this.lblLogo.TabIndex = 1;
+            this.lblLogo.Click += new System.EventHandler(this.lblLogo_Click);
             // 
             // FormTransacao
             // 
@@ -305,8 +306,9 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblLogo);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -323,7 +325,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label11;

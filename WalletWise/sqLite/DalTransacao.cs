@@ -84,20 +84,24 @@ namespace WalletWise
             {
                 using (var cmd = DbConnection().CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO Transacao(ID, descricao, valor, data, tipo_compra,receita_despesa)" +
-                        " values (@ID, @descricao, @valor, @data, @tipo_compra, @receita_despesa";
-                    cmd.Parameters.AddWithValue("@ID", transacao.ID);
+                    cmd.CommandText = "INSERT INTO Transacao(descricao, valor, data, tipo_compra, receita_despesa) " +
+                                      "VALUES (@descricao, @valor, @data, @tipo_compra, @receita_despesa)";
+                    
                     cmd.Parameters.AddWithValue("@descricao", transacao.Descricao);
                     cmd.Parameters.AddWithValue("@valor", transacao.Valor);
+                    cmd.Parameters.AddWithValue("@data", transacao.Data); // Adicionando o parâmetro data
                     cmd.Parameters.AddWithValue("@tipo_compra", transacao.tipo_compra);
                     cmd.Parameters.AddWithValue("@receita_despesa", transacao.receita_despesa);
+
                     cmd.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw new Exception("Erro ao adicionar a transação: " + ex.Message, ex);
             }
         }
+    
     }
 }
+

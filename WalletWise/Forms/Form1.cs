@@ -9,12 +9,14 @@ namespace WalletWise
         public Form1()
         {
             InitializeComponent();
-        }       
+        }
         private bool isValueHidden = true;
-        private void Lblolho_Click(object sender, EventArgs e) {
+        private void Lblolho_Click(object sender, EventArgs e)
+        {
             isValueHidden = !isValueHidden;
-            if (isValueHidden) {
-                lblSaldo.Text = "R$ *********"; 
+            if (isValueHidden)
+            {
+                lblSaldo.Text = "R$ *********";
                 lblOlho.Image = Properties.Resources.olho_ferchado;
             }
             else
@@ -26,7 +28,7 @@ namespace WalletWise
 
         private void Addtran_Click(object sender, EventArgs e)
         {
-            FormTransacao transacao = new FormTransacao();
+            FormCriarTransacao transacao = new FormCriarTransacao();
             transacao.ShowDialog();
             this.Close();
         }
@@ -35,7 +37,7 @@ namespace WalletWise
         {
             DalTransacao.CriarBancoSQLite();
             DalTransacao.CriarTabela();
-        
+
         }
     }
 }
