@@ -86,7 +86,7 @@
             // 
             this.label6.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label6.Location = new System.Drawing.Point(95, 282);
+            this.label6.Location = new System.Drawing.Point(95, 345);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(160, 44);
             this.label6.TabIndex = 18;
@@ -97,7 +97,7 @@
             // 
             this.label7.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label7.Location = new System.Drawing.Point(97, 212);
+            this.label7.Location = new System.Drawing.Point(97, 275);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(160, 44);
             this.label7.TabIndex = 19;
@@ -108,7 +108,7 @@
             // 
             this.label8.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label8.Location = new System.Drawing.Point(95, 358);
+            this.label8.Location = new System.Drawing.Point(95, 421);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(160, 44);
             this.label8.TabIndex = 21;
@@ -124,7 +124,7 @@
             "Transporte ",
             "Saúde ",
             "Lazer"});
-            this.cmbTipo.Location = new System.Drawing.Point(114, 259);
+            this.cmbTipo.Location = new System.Drawing.Point(114, 322);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(408, 21);
             this.cmbTipo.TabIndex = 23;
@@ -132,14 +132,14 @@
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(114, 332);
+            this.txtDescricao.Location = new System.Drawing.Point(114, 395);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(408, 20);
             this.txtDescricao.TabIndex = 24;
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(114, 408);
+            this.txtValor.Location = new System.Drawing.Point(114, 471);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(408, 20);
             this.txtValor.TabIndex = 25;
@@ -149,7 +149,7 @@
             // 
             this.label12.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label12.Location = new System.Drawing.Point(95, 433);
+            this.label12.Location = new System.Drawing.Point(95, 210);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(175, 44);
             this.label12.TabIndex = 29;
@@ -161,7 +161,7 @@
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.RdbDespesa);
             this.groupBox1.Controls.Add(this.RdbReceita);
-            this.groupBox1.Location = new System.Drawing.Point(114, 479);
+            this.groupBox1.Location = new System.Drawing.Point(114, 256);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(406, 20);
             this.groupBox1.TabIndex = 30;
@@ -181,7 +181,7 @@
             // RdbReceita
             // 
             this.RdbReceita.AutoSize = true;
-            this.RdbReceita.Location = new System.Drawing.Point(6, 3);
+            this.RdbReceita.Location = new System.Drawing.Point(2, 2);
             this.RdbReceita.Name = "RdbReceita";
             this.RdbReceita.Size = new System.Drawing.Size(62, 17);
             this.RdbReceita.TabIndex = 0;
@@ -224,7 +224,7 @@
             // label10
             // 
             this.label10.Image = global::WalletWise.Properties.Resources.input__1_;
-            this.label10.Location = new System.Drawing.Point(94, 470);
+            this.label10.Location = new System.Drawing.Point(94, 247);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(445, 40);
             this.label10.TabIndex = 28;
@@ -242,7 +242,7 @@
             // label9
             // 
             this.label9.Image = global::WalletWise.Properties.Resources.input__1_;
-            this.label9.Location = new System.Drawing.Point(94, 398);
+            this.label9.Location = new System.Drawing.Point(94, 461);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(445, 40);
             this.label9.TabIndex = 20;
@@ -250,7 +250,7 @@
             // label5
             // 
             this.label5.Image = global::WalletWise.Properties.Resources.input__1_;
-            this.label5.Location = new System.Drawing.Point(94, 322);
+            this.label5.Location = new System.Drawing.Point(94, 385);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(445, 40);
             this.label5.TabIndex = 17;
@@ -258,7 +258,7 @@
             // label4
             // 
             this.label4.Image = global::WalletWise.Properties.Resources.input__1_;
-            this.label4.Location = new System.Drawing.Point(96, 250);
+            this.label4.Location = new System.Drawing.Point(96, 313);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(445, 40);
             this.label4.TabIndex = 16;
@@ -281,7 +281,7 @@
             this.lblLogo.TabIndex = 1;
             this.lblLogo.Click += new System.EventHandler(this.lblLogo_Click);
             // 
-            // FormTransacao
+            // FormCriarTransacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -312,9 +312,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormTransacao";
+            this.Name = "FormCriarTransacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transação";
+            this.Load += new System.EventHandler(this.FormCriarTransacao_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

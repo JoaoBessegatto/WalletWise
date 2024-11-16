@@ -12,12 +12,19 @@ namespace WalletWise
 {
     public partial class FormCriarTransacao : Form
     {
+        private List<string> itensReceita = new List<string> { "Salário", "Ganhos de investimento", "Aposentadoria/Pensão", "Aluguel recebido", "Outros" };
+        private List<string> itensDespesa = new List<string> { "Aluguel", "Transporte", "Alimentação", "Contas (Água, Luz, Internet)", "Saúde", "Lazer", "Impostos"  , "Outros" };
+
         public FormCriarTransacao()
         {
             InitializeComponent();
-        }
 
-        private void txtValor_KeyPress(object sender, KeyPressEventArgs e)
+            RdbReceita.CheckedChanged += RdbReceita_CheckedChanged;
+            RdbDespesa.CheckedChanged += RdbDespesa_CheckedChanged;
+        }
+       
+    
+private void txtValor_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
             {
@@ -30,8 +37,8 @@ namespace WalletWise
                 e.Handled = true;
             }
         }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
+    
+private void btnCancelar_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
             form1.ShowDialog();
@@ -89,6 +96,32 @@ namespace WalletWise
             Form1 form1 = new Form1();
             form1.ShowDialog();
             this.Close();
+        }
+
+        private void FormCriarTransacao_Load(object sender, EventArgs e)
+        {            
+            RdbDespesa.Checked = true;  
+            AtualizarItensComboBox(itensDespesa);
+        }
+        private void RdbReceita_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RdbReceita.Checked)
+            {
+                AtualizarItensComboBox(itensReceita);
+            }
+        }
+        private void RdbDespesa_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RdbDespesa.Checked)
+            {
+                AtualizarItensComboBox(itensDespesa);
+            }
+        }
+        private void AtualizarItensComboBox(List<string> itens)
+        {
+            cmbTipo.Items.Clear(); // Limpar itens existentes
+            cmbTipo.Items.AddRange(itens.ToArray()); // Adicionar novos itens
+            cmbTipo.SelectedIndex = -1; // Limpar seleção
         }
     }
 }

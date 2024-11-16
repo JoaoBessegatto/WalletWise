@@ -37,7 +37,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnTrans = new System.Windows.Forms.Button();
             this.Addtran = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.lblOlho = new System.Windows.Forms.Label();
@@ -135,17 +135,18 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(160, 44);
             this.label12.TabIndex = 16;
-            this.label12.Text = "Visualizar graficos";
+            this.label12.Text = "Visualizar transações";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button2
+            // btnTrans
             // 
-            this.button2.Image = global::WalletWise.Properties.Resources.graficos;
-            this.button2.Location = new System.Drawing.Point(382, 537);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(160, 55);
-            this.button2.TabIndex = 15;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnTrans.Image = global::WalletWise.Properties.Resources.transações;
+            this.btnTrans.Location = new System.Drawing.Point(382, 537);
+            this.btnTrans.Name = "btnTrans";
+            this.btnTrans.Size = new System.Drawing.Size(160, 55);
+            this.btnTrans.TabIndex = 15;
+            this.btnTrans.UseVisualStyleBackColor = true;
+            this.btnTrans.Click += new System.EventHandler(this.btnTrans_Click);
             // 
             // Addtran
             // 
@@ -219,7 +220,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(634, 611);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnTrans);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.Addtran);
             this.Controls.Add(this.label10);
@@ -265,6 +266,6 @@
         private System.Windows.Forms.Button Addtran;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnTrans;
     }
 }

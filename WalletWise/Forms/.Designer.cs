@@ -85,9 +85,9 @@
             // 
             this.label12.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label12.Location = new System.Drawing.Point(419, 482);
+            this.label12.Location = new System.Drawing.Point(413, 483);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(160, 44);
+            this.label12.Size = new System.Drawing.Size(145, 44);
             this.label12.TabIndex = 41;
             this.label12.Text = "Visualizar graficos";
             this.label12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -95,9 +95,9 @@
             // btnDados
             // 
             this.btnDados.Image = global::WalletWise.Properties.Resources.graficos;
-            this.btnDados.Location = new System.Drawing.Point(419, 526);
+            this.btnDados.Location = new System.Drawing.Point(423, 526);
             this.btnDados.Name = "btnDados";
-            this.btnDados.Size = new System.Drawing.Size(160, 55);
+            this.btnDados.Size = new System.Drawing.Size(122, 57);
             this.btnDados.TabIndex = 40;
             this.btnDados.UseVisualStyleBackColor = true;
             // 

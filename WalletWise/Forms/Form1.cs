@@ -39,5 +39,12 @@ namespace WalletWise
             DalTransacao.CriarTabela();
 
         }
+
+        private void btnTrans_Click(object sender, EventArgs e)
+        {
+            Graficos graficos = new Graficos();
+            graficos.ShowDialog();
+            this.Close();
+        }
     }
 }
