@@ -101,7 +101,71 @@ namespace WalletWise
                 throw new Exception("Erro ao adicionar a transação: " + ex.Message, ex);
             }
         }
-    
+        public static List<Transacao> GetAll()
+        {
+            var transacoes = new List<Transacao>();
+
+            try
+            {
+                using (var cmd = DbConnection().CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM Transacao";
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            transacoes.Add(new Transacao
+                            {
+                                ID = reader.GetInt32(0),
+                                Descricao = reader.GetString(1),
+                                Valor = reader.GetDecimal(2),
+                                Data = reader.GetDateTime(3),
+                                tipo_compra = reader.GetString(4),
+                                receita_despesa = reader.GetString(5)
+                            });
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao buscar as transações: " + ex.Message);
+            }
+
+            return transacoes;
+        }
+        public static Transacao GetUltimaTransacao()
+        {
+            try
+            {
+                using (var cmd = DbConnection().CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM Transacao ORDER BY ID DESC LIMIT 1";
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Transacao
+                            {
+                                ID = reader.GetInt32(0),
+                                Descricao = reader.GetString(1),
+                                Valor = reader.GetDecimal(2),
+                                Data = reader.GetDateTime(3),
+                                tipo_compra = reader.GetString(4),
+                                receita_despesa = reader.GetString(5)
+                            };
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao obter a última transação: " + ex.Message);
+            }
+
+            return null; 
+        }
     }
 }
 
