@@ -101,7 +101,6 @@
             this.lblReceita.Name = "lblReceita";
             this.lblReceita.Size = new System.Drawing.Size(110, 25);
             this.lblReceita.TabIndex = 9;
-            this.lblReceita.Text = "R$ 100.534,90";
             this.lblReceita.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblDespesa
@@ -113,7 +112,6 @@
             this.lblDespesa.Name = "lblDespesa";
             this.lblDespesa.Size = new System.Drawing.Size(113, 25);
             this.lblDespesa.TabIndex = 10;
-            this.lblDespesa.Text = "R$ 100.534,90";
             this.lblDespesa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label11

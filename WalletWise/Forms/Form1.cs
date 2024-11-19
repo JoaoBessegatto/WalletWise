@@ -13,8 +13,7 @@ namespace WalletWise
         }
         private bool isValueHidden = true;
         private void Lblolho_Click(object sender, EventArgs e)
-        {
-            isValueHidden = !isValueHidden;
+        {            
             if (isValueHidden)
             {
                 lblSaldo.Text = "R$ *********";
@@ -26,10 +25,12 @@ namespace WalletWise
                 lblSaldo.Text = "R$ " + ValorFinal.ToString("#,###.00");
                 lblOlho.Image = Properties.Resources.olho;
             }
+            isValueHidden = !isValueHidden;
         }
 
         private void Addtran_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FormCriarTransacao transacao = new FormCriarTransacao();
             transacao.ShowDialog();
             this.Close();
@@ -41,7 +42,8 @@ namespace WalletWise
             DalTransacao.CriarTabela();
             decimal ValorFinal = CalcularSaldoTotal();
             lblSaldo.Text = "R$ " + ValorFinal.ToString("#,###. 00");
-            VerificarUltimaTransacao();
+            VerificarUltimaReceita();
+            VerificarUltimaDespesa();
         }
         public decimal CalcularSaldoTotal()
         {
@@ -64,19 +66,38 @@ namespace WalletWise
             }
             return  SaldoTotal = totalReceitas - totalDespesas;
         }
-        private void VerificarUltimaTransacao()
+        private void VerificarUltimaReceita()
         {
             try
             {
-                Transacao ultimaTransacao = DalTransacao.GetUltimaTransacao();
+                Transacao ultimaTransacao = DalTransacao.GetUltimaReceita();
 
                 if (ultimaTransacao != null)
                 {
                     if (ultimaTransacao.receita_despesa == "Receita")
                     {
                         lblReceita.Text = "R$ " + ultimaTransacao.Valor.ToString("#,###. 00");
+                    }                    
+                    else
+                    {
+                        MessageBox.Show("Não há transações registradas no banco.", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    else if (ultimaTransacao.receita_despesa == "Despesa")
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao verificar a última transação: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void VerificarUltimaDespesa()
+        {
+            try
+            {
+                Transacao ultimaTransacao = DalTransacao.GetUltimaDespesa();
+
+                if (ultimaTransacao != null)
+                {
+                    if (ultimaTransacao.receita_despesa == "Despesa")
                     {
                         lblDespesa.Text = "R$ " + ultimaTransacao.Valor.ToString("#,###. 00");
                     }
@@ -93,9 +114,10 @@ namespace WalletWise
         }
         private void btnTrans_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Graficos graficos = new Graficos();
             graficos.ShowDialog();
             this.Close();
-        }
+        }       
     }
 }

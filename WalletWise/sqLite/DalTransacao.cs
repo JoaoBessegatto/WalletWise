@@ -8,6 +8,7 @@ using System.IO;
 using System.Data;
 using System.Data.Entity;
 using System.Data.Common;
+using WalletWise.Forms;
 
 namespace WalletWise
 {
@@ -134,26 +135,25 @@ namespace WalletWise
 
             return transacoes;
         }
-        public static Transacao GetUltimaTransacao()
+        public static Transacao GetUltimaReceita()
         {
             try
             {
                 using (var cmd = DbConnection().CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM Transacao ORDER BY ID DESC LIMIT 1";
-
+                    cmd.CommandText = "SELECT * FROM Transacao WHERE receita_despesa = 'Receita' ORDER BY data DESC LIMIT 1;";
                     using (var reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
                             return new Transacao
                             {
-                                ID = reader.GetInt32(0),
-                                Descricao = reader.GetString(1),
-                                Valor = reader.GetDecimal(2),
-                                Data = reader.GetDateTime(3),
-                                tipo_compra = reader.GetString(4),
-                                receita_despesa = reader.GetString(5)
+                                ID = reader.GetInt32(reader.GetOrdinal("ID")),
+                                Descricao = reader.GetString(reader.GetOrdinal("descricao")),
+                                Valor = reader.GetDecimal(reader.GetOrdinal("valor")),
+                                Data = reader.GetDateTime(reader.GetOrdinal("data")),
+                                tipo_compra = reader.GetString(reader.GetOrdinal("tipo_compra")),
+                                receita_despesa = reader.GetString(reader.GetOrdinal("receita_despesa"))
                             };
                         }
                     }
@@ -161,11 +161,100 @@ namespace WalletWise
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao obter a última transação: " + ex.Message);
+                throw new Exception("Erro ao obter a última receita: " + ex.Message);
+            }
+            return null; // Retorna null se não houver receita
+        }
+
+        public static Transacao GetUltimaDespesa()
+        {
+            try
+            {
+                using (var cmd = DbConnection().CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM Transacao WHERE receita_despesa = 'Despesa' ORDER BY data DESC LIMIT 1;";
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Transacao
+                            {
+                                ID = reader.GetInt32(reader.GetOrdinal("ID")),
+                                Descricao = reader.GetString(reader.GetOrdinal("descricao")),
+                                Valor = reader.GetDecimal(reader.GetOrdinal("valor")),
+                                Data = reader.GetDateTime(reader.GetOrdinal("data")),
+                                tipo_compra = reader.GetString(reader.GetOrdinal("tipo_compra")),
+                                receita_despesa = reader.GetString(reader.GetOrdinal("receita_despesa"))
+                            };
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao obter a última despesa: " + ex.Message);
+            }
+            return null; // Retorna null se não houver despesa
+        }
+
+        public static List<DadosGrafico> ObterDadosGrafico()
+        {
+            var lista = new List<DadosGrafico>();
+
+            using (var cmd = DbConnection().CreateCommand())
+            {
+                cmd.CommandText = @"
+            SELECT 
+                strftime('%Y-%m', data) AS Mes, 
+                SUM(CASE WHEN receita_despesa = 'Receita' THEN valor ELSE 0 END) AS Receitas,
+                SUM(CASE WHEN receita_despesa = 'Despesa' THEN valor ELSE 0 END) AS Despesas
+            FROM Transacao
+            GROUP BY strftime('%Y-%m', data)
+            ORDER BY Mes";
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        lista.Add(new DadosGrafico
+                        {
+                            Mes = reader.GetString(0),
+                            Receitas = reader.GetDecimal(1),
+                            Despesas = reader.GetDecimal(2)
+                        });
+                    }
+                }
             }
 
-            return null; 
+            return lista;
+        }
+        public static DataTable GetDespesasAgrupadasPorTipo()
+        {
+            try
+            {
+                using (var cmd = DbConnection().CreateCommand())
+                {
+                    cmd.CommandText = @"
+                SELECT tipo_compra, SUM(valor) AS total
+                FROM Transacao
+                WHERE receita_despesa = 'Despesa'
+                GROUP BY tipo_compra;
+            ";
+
+                    using (var adapter = new SQLiteDataAdapter(cmd))
+                    {
+                        DataTable table = new DataTable();
+                        adapter.Fill(table);
+                        return table;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao obter os dados das despesas: " + ex.Message);
+            }
         }
     }
+
 }
 

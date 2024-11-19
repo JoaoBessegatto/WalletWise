@@ -63,6 +63,16 @@ namespace WalletWise.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap anterior {
+            get {
+                object obj = ResourceManager.GetObject("anterior", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Button {
             get {
                 object obj = ResourceManager.GetObject("Button", resourceCulture);
@@ -96,6 +106,26 @@ namespace WalletWise.Properties {
         internal static System.Drawing.Bitmap foot {
             get {
                 object obj = ResourceManager.GetObject("foot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap grafico_1 {
+            get {
+                object obj = ResourceManager.GetObject("grafico 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap grafico_2 {
+            get {
+                object obj = ResourceManager.GetObject("grafico 2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +196,16 @@ namespace WalletWise.Properties {
         internal static System.Drawing.Bitmap olho_ferchado {
             get {
                 object obj = ResourceManager.GetObject("olho ferchado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap proximo {
+            get {
+                object obj = ResourceManager.GetObject("proximo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -55,6 +55,7 @@
     <Reference Include="System.Data.SQLite.Linq, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SQLite.Linq.1.0.119.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,6 +67,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DadosGrafico.cs" />
+    <Compile Include="Forms\Grafico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Grafico.Designer.cs">
+      <DependentUpon>Grafico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GraficoPizza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GraficoPizza.Designer.cs">
+      <DependentUpon>GraficoPizza.cs</DependentUpon>
+    </Compile>
     <Compile Include="sqLite\DalTransacao.cs" />
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
@@ -96,6 +110,12 @@
     <Compile Include="Transacao.cs" />
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Grafico.resx">
+      <DependentUpon>Grafico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GraficoPizza.resx">
+      <DependentUpon>GraficoPizza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Transacao.resx">
       <DependentUpon>Transacao.cs</DependentUpon>
@@ -169,6 +189,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\transações.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grafico 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proximo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anterior.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grafico 2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

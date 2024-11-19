@@ -124,6 +124,9 @@
   <data name="transações" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\transações.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="anterior" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\anterior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="foot" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,8 +142,11 @@
   <data name="olho ferchado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\olho ferchado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="layout transação" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\layout transação.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Design sem nome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Design sem nome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grafico 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grafico 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="seta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\seta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,11 +154,17 @@
   <data name="layout Graficos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\layout Graficos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="graficos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\graficos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Design sem nome" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Design sem nome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="transações1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transações.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="layout transação" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\layout transação.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Voltar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Voltar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,10 +175,10 @@
   <data name="salvar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\salvar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="graficos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\graficos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="proximo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\proximo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="transações1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\transações.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="grafico 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grafico 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

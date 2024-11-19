@@ -314,7 +314,7 @@
             this.MinimizeBox = false;
             this.Name = "FormCriarTransacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Transação";
+            this.Text = " Criar transação";
             this.Load += new System.EventHandler(this.FormCriarTransacao_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
